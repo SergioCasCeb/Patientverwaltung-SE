@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patientverwaltung</title>
+
+    <!--Boostrap css styles-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--Css stylesheet-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Saira:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+</head>
+
+<body>
+
+    <header class="py-5">
+        <div class="container text-center">
+
+            <div class="heading pb-5 ">
+                <h1 class="pt-5">Patientverwaltung</h1>
+            </div>
+
+            <nav class="nav-sec my-5 pt-5 navbar navbar-expand-md">
+                <ul class="navbar-nav text-left">
+
+                    <li class="nav-item mr-4">
+                        <a href="#" class="nav-link home-icon"><i class="fas fa-home"></i></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav text-left">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-user-check"></i><span class="ml-2">User1</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="index.html">Log-out</a>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="main-site">
+        <div class="container">
+
+            <div class="edit-btns mb-5">
+                <button type="button" class="btn btn-outline-secondary btn-lg add-patient col-md-2">Add New Patient</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg add-service col-md-2 my-3">Add New Service</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg show-services col-md-2 mb-3">Show Services</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg show-patients col-md-2">Show Patients</button>
+
+            </div>
+
+            <div class="add-patient-form mb-5 hidden border p-3">
+                <form action="#" onsubmit="return false" autocomplete="off">
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control form-control-lg pat-fname" placeholder="First Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control form-control-lg pat-lname" placeholder="Last Name" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-3 mb-3">
+                            <select class="form-control form-control-lg pat-gender" id="sel1" required>
+                                    <option value="">Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                  </select>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <input type="date" class="form-control form-control-lg pat-date" placeholder="dd-mm-yyyy" required>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <select class="form-control form-control-lg pat-insurance" id="sel1" required>
+                                    <option value="">insurance Type</option>
+                                    <option value="private">Private</option>
+                                    <option value="pv">PV</option>
+                                  </select>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <select class="form-control form-control-lg pat-service" id="sel1" required>
+                                    
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <input type="text" class="form-control form-control-lg pat-address" placeholder="Address" required>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <input type="email" class="form-control form-control-lg pat-mail" placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block mb-3" id="submit-patient">Submit</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-danger btn-lg btn-block mb-3" id="close-patient">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="add-service-form mb-5 hidden border p-3">
+                <form action="#" onsubmit="return false" autocomplete="off">
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <input type="text" class="form-control form-control-lg input-service-name" placeholder="Service Name" required>
+                        </div>
+                    </div>
+
+                    <div class="row container-prices">
+
+                        <div class="col-md-6 mb-3">
+                            <input type="number" id="" class="form-control form-control-lg price-private" placeholder="Price for private insurance" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <input type="number" id="" class="form-control form-control-lg price-pv" placeholder="Price for PV" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block mb-3" id="submit-service">Submit</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-danger btn-lg btn-block mb-3" id="close-service">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <section class="patient-table mb-5">
+
+                <div class="search-bar mb-5">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control form-control-lg col-md-8 search-patient" placeholder="Find patient">
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Patient Nr.</th>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Gender</th>
+                                <th>Date of birth</th>
+                                <th>Address</th>
+                                <th>Type of insurance</th>
+                                <th>Service</th>
+                                <th>Edit/Delete</th>
+                                <th>Profile</th>
+                            </tr>
+                        </thead>
+                        <tbody id="new-patient-container" class="body-patient-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+            <section class="service-table mb-5 hidden">
+
+                <div class="search-bar mb-5">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control form-control-lg col-md-8 search-service" placeholder="Find service">
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover text-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Service Nr.</th>
+                                <th>Name</th>
+                                <th>Private price</th>
+                                <th>PV price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="new-service-container" class=" body-service-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center pt-3 pb-1">
+            <p>&copy; 2021 Patientverwaltung | <a href="#">Impressum</a> | <a href="#">Datenschutz </a></p>
+        </div>
+    </footer>
+
+
+    <div class="confirm-text-pat hidden">
+        <div class="pat-confim-content p-5 rounded-lg ">   
+        </div>
+    </div>
+
+    <div class="confirm-text-ser hidden">
+        <div class="ser-confim-content p-5 rounded-lg ">
+        </div>
+    </div>
+
+    <div class="container-profile-pat hidden">
+        <div class="profile-pat-content rounded-lg p-5">
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js " integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF " crossorigin="anonymous "></script>
+
+    <!--Link for fontawesome icons-->
+    <script src="https://kit.fontawesome.com/d66d421276.js " crossorigin="anonymous "></script>
+
+    <!--Main js files-->
+    <script src="js/main.js"></script>
+    <script src="js/main-patients.js"></script>
+    <script src="js/main-services.js"></script>
+</body>
+
+</html>

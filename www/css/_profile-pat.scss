@@ -1,0 +1,25 @@
+.container-profile-pat{
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background-color: #00000079;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.hidden{
+        display: none;
+    }
+    .profile-pat-content{
+        background-color: white;
+        min-width: 30%;
+        span{
+            font-weight: bold;
+        }
+        .pat-number{
+            color: rgb(75, 75, 75);
+            font-size: var(--fs-footer);
+        }
+    }
+}

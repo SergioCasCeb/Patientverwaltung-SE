@@ -1,0 +1,15 @@
+{
+  "name": "patientverwaltung-se",
+  "version": "1.0.0",
+  "description": "website to manage patients in a hopital",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sergio Castro",
+  "license": "ISC"
+}

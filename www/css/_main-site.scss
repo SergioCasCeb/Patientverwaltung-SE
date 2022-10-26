@@ -1,0 +1,41 @@
+.main-site{
+
+    min-height: 70vh;
+    table{
+        thead{
+            font-size: 1.5rem;
+        }
+
+        tbody, tbody a{
+            font-size: 1.4rem;
+        }
+
+        .body-patient-table{
+            i{
+                font-size: var(--fs-links);
+                cursor: pointer;
+                transition: color 250ms ease-in-out;
+                &:hover{
+                    color: var(--donau-blau);
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-site{
+        .edit-btns{
+            .show-services{
+                margin: 0 2rem 0 0!important;
+            }
+
+            .add-service{
+                margin: 0 2rem!important;
+            }
+            
+        
+        }
+    }
+}

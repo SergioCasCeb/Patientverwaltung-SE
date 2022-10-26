@@ -1,0 +1,296 @@
+/**Global variables**/
+:root {
+  --thd-blau: #1a4273;
+  --donau-blau: #009fe3;
+  --dark-grey: #313131;
+  --light-grey: #434343;
+  --schema-bg: rgba(255, 255, 255, 0.9);
+  --schema-color: var(--dark-grey);
+  --lh: 1.4rem;
+  --clr-border: #333;
+  --biw-green: #13a538ff;
+  --aww-red: #b2110eff;
+  --emt-yellow: #ffd500ff;
+  --mbm-blue: #0085c8ff;
+  --anw-purple: #59358cff;
+  --agw-orange: #f18700ff;
+  --ai-pink: #e73d55ff;
+  --eu-campus: #17a2b0ff;
+  --fs-h1: 5.3rem;
+  --fs-h2: 3.7rem;
+  --fs-h3: 1.8rem;
+  --fs-links: 1.7rem;
+  --fs-table: 1.6rem;
+  --fs-p: 1.4rem;
+  --fs-icon: 2rem;
+  --fs-footer: 1.3rem;
+  --fw-main: 400;
+  --fw-sub: 300;
+  --ff-hd: 'Roboto Condensed', sans-serif;
+  --ff-p: 'Saira', sans-serif;
+  --lh-main: 1.2;
+  --ls-hd: 1rem;
+  --fs-box: 2.8rem;
+  --fw-box: 500;
+  --tt-box: uppercase;
+  --lh-box: 1.3;
+  --clr-box: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  font-size: var(--fs-links);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  font-family: var(--ff-hd);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+body {
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+  position: relative;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+header .nav-sec {
+  border-bottom: 1px solid var(--donau-blau);
+}
+
+header .nav-sec ul {
+  width: 100%;
+}
+
+header .nav-sec ul i {
+  font-size: var(--fs-icon);
+}
+
+@media screen and (min-width: 768px) {
+  header .nav-sec ul:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+
+/*Footer*/
+footer {
+  background-color: silver;
+}
+
+footer, footer a {
+  font-size: var(--fs-footer);
+  color: black;
+}
+
+/** Utilities**/
+.hidden {
+  display: none;
+}
+
+.login-page {
+  height: 100vh;
+  background-color: #2e87db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-screen {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login-screen .img-user {
+  height: 10rem;
+  width: 10rem;
+  background-color: #a0a0a0;
+  margin: 0 auto;
+}
+
+.login-screen .img-user i {
+  color: white;
+  font-size: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .login-screen {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .login-screen {
+    width: 50%;
+  }
+}
+
+.main-site {
+  min-height: 70vh;
+}
+
+.main-site table thead {
+  font-size: 1.5rem;
+}
+
+.main-site table tbody, .main-site table tbody a {
+  font-size: 1.4rem;
+}
+
+.main-site table .body-patient-table i {
+  font-size: var(--fs-links);
+  cursor: pointer;
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+}
+
+.main-site table .body-patient-table i:hover {
+  color: var(--donau-blau);
+}
+
+@media screen and (min-width: 768px) {
+  .main-site .edit-btns .show-services {
+    margin: 0 2rem 0 0 !important;
+  }
+  .main-site .edit-btns .add-service {
+    margin: 0 2rem !important;
+  }
+}
+
+.confirm-text-pat {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000008a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirm-text-pat .pat-confim-content {
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.confirm-text-pat .pat-confim-content h3 {
+  font-weight: bold;
+}
+
+.confirm-text-pat.hidden {
+  display: none;
+}
+
+.confirm-text-ser {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000008a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.confirm-text-ser .ser-confim-content {
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.confirm-text-ser .ser-confim-content h3 {
+  font-weight: bold;
+}
+
+.confirm-text-ser.hidden {
+  display: none;
+}
+
+.container-profile-pat {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-color: #00000079;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-profile-pat.hidden {
+  display: none;
+}
+
+.container-profile-pat .profile-pat-content {
+  background-color: white;
+  min-width: 30%;
+}
+
+.container-profile-pat .profile-pat-content span {
+  font-weight: bold;
+}
+
+.container-profile-pat .profile-pat-content .pat-number {
+  color: #4b4b4b;
+  font-size: var(--fs-footer);
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,25 @@
+
+.confirm-text-pat{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0000008a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pat-confim-content{
+        background-color: white;
+        width: fit-content;
+
+        h3{
+            font-weight: bold;
+        }
+    }
+}
+
+.confirm-text-pat.hidden{
+    display: none;
+}
+

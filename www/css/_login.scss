@@ -1,0 +1,39 @@
+.login-page{
+    height: 100vh;
+    background-color: rgb(46, 135, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.login-screen{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+
+    .img-user{
+        height: 10rem;
+        width: 10rem;
+        background-color: rgb(160, 160, 160);
+        margin: 0 auto;
+
+        i{
+            color: white;
+            font-size: 6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .login-screen{
+        width: 65%;
+    }  
+}
+
+@media screen and (min-width: 1024px) {
+    .login-screen{
+        width: 50%;
+    }  
+}

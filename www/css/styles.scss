@@ -1,0 +1,143 @@
+/**Global variables**/
+
+:root {
+    //Colors
+    --thd-blau: #1a4273;
+    --donau-blau: #009fe3;
+    --dark-grey: #313131;
+    --light-grey: #434343;
+    --schema-bg: rgba(255, 255, 255, 0.9);
+    --schema-color: var(--dark-grey);
+    --lh: 1.4rem;
+    --clr-border: #333;
+    //Studiengaenge colors
+    --biw-green: #13a538ff;
+    --aww-red: #b2110eff;
+    --emt-yellow: #ffd500ff;
+    --mbm-blue: #0085c8ff;
+    --anw-purple: #59358cff;
+    --agw-orange: #f18700ff;
+    --ai-pink: #e73d55ff;
+    --eu-campus: #17a2b0ff;
+    //Font sizes
+    --fs-h1: 5.3rem;
+    --fs-h2: 3.7rem;
+    --fs-h3: 1.8rem;
+    --fs-links: 1.7rem;
+    --fs-table: 1.6rem;
+    --fs-p: 1.4rem;
+    --fs-icon: 2rem;
+    --fs-footer: 1.3rem;
+    //Font weights
+    --fw-main: 400;
+    --fw-sub: 300;
+    //Font families
+    --ff-hd: 'Roboto Condensed', sans-serif;
+    --ff-p: 'Saira', sans-serif;
+    //line height
+    --lh-main: 1.2;
+    //letter spacing
+    --ls-hd: 1rem;
+    //Boxes
+    --fs-box: 2.8rem;
+    --fw-box: 500;
+    --tt-box: uppercase;
+    --lh-box: 1.3;
+    --clr-box: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    font-size: var(--fs-links);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    font-weight: bold;
+    font-family: var(--ff-hd);
+}
+
+h1{
+    font-size: var(--fs-h1);
+}
+h2{
+    font-size: var(--fs-h2);
+}
+h3{
+    font-size: var(--fs-h3);
+}
+
+body{
+    font-family: var(--ff-p);
+    font-size: var(--fs-p);
+    position: relative;
+}
+
+body.active{
+    overflow: hidden;
+}
+
+
+
+header {
+    //Nav
+    .nav-sec {
+        border-bottom: 1px solid var(--donau-blau);
+        ul {
+            width: 100%;
+            i {
+                font-size: var(--fs-icon);
+            }
+        }
+    }
+    
+    
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+        //Nav
+        .nav-sec {
+            ul {
+                &:nth-child(2) {
+                    display: flex;
+                    justify-content: right;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/*Footer*/
+
+footer {
+    background-color: rgb(192, 192, 192);
+}
+footer, footer a{
+    font-size: var(--fs-footer);
+    color: rgb(0, 0, 0)
+}
+
+
+/** Utilities**/
+
+.hidden{
+    display: none;
+}
+@import "login";
+@import "main-site";
+@import "confirm-pat";
+@import "confirm-ser";
+@import "profile-pat";
